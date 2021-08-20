@@ -6,3 +6,28 @@ body{
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Baloo 2', cursive;
 }
+
+#horizontal-line{
+    width: 250px;
+}
+button{
+    background-color: whitesmoke;
+    border: 2px solid gray;
+    
+}
+
+.btn-design, #cupon-apply-btn{
+    border-radius: 6px;
+}
+.btn-design:hover{
+    /* border-radius: 6px; */
+    background-color: gray;
+    color: white;
+}
+
+#cupon-apply-btn{
+    background-color: red;
+    color: white;
+    font-weight: 500;
+
+}
