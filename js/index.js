@@ -4,6 +4,7 @@
 function totalCost() {
     let memoryCostText = document.getElementById("extra-memory-cost");
     memoryCost = parseInt(memoryCostText.innerText)
+
     let storageCostText = document.getElementById("extra-storage-cost");
     storageCost = parseInt(storageCostText.innerText)
 
@@ -24,12 +25,10 @@ function memoryCostUpdate(memoryCepacity) {
     memoryCost = parseInt(memoryCostText.innerText)
     // let totalPriceText = document.getElementById("total-price");
     if (memoryCepacity == "8gb") {
-        
         memoryCostText.innerText = 0
     } 
     else {
         memoryCostText.innerText = 180
-        
     }
     totalCost()
 }
@@ -59,7 +58,6 @@ function deliveryCostUpdate(deliveryCharge) {
     let deliveryCostText = document.getElementById("extra-delivery-cost");
     deliveryCost = parseInt(deliveryCostText.innerText)
     if (deliveryCharge == "free") {
-        
         deliveryCostText.innerText = 0
     } 
     else {

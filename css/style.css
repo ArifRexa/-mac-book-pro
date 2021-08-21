@@ -1,4 +1,3 @@
-
 /* ========================================
                 Font Baloo 2 
 =========================================*/
@@ -8,14 +7,14 @@
 }
 
 
-
 /* ========================================
             Button Design 
 =========================================*/
 button{
     background-color: whitesmoke;
     border: 2px solid gray;
-    
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .btn-design, #cupon-apply-btn{
@@ -23,15 +22,15 @@ button{
 }
 .btn-design:hover{
     /* border-radius: 6px; */
-    background-color: gray;
+    background-color: rgb(56, 53, 53);
     color: white;
 }
 
 #cupon-apply-btn{
     background-color: red;
+    border: 3px solid rgb(212, 118, 118);
     color: white;
     font-weight: 500;
-
 }
 
 
