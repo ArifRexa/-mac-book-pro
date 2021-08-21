@@ -23,7 +23,6 @@ function totalCost() {
 function memoryCostUpdate(memoryCepacity) {
     let memoryCostText = document.getElementById("extra-memory-cost");
     memoryCost = parseInt(memoryCostText.innerText)
-    // let totalPriceText = document.getElementById("total-price");
     if (memoryCepacity == "8gb") {
         memoryCostText.innerText = 0
     } 
