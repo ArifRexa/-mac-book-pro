@@ -1,3 +1,24 @@
+/* =========================================================
+                        Total Pricing
+========================================================= */
+function totalCost() {
+    let memoryCostText = document.getElementById("extra-memory-cost");
+    memoryCost = parseInt(memoryCostText.innerText)
+    let storageCostText = document.getElementById("extra-storage-cost");
+    storageCost = parseInt(storageCostText.innerText)
+
+    let deliveryCostText = document.getElementById("extra-delivery-cost");
+    deliveryCost = parseInt(deliveryCostText.innerText)
+
+    let totalPriceTexts = document.getElementsByClassName("total-price")
+    for (const totalPriceText of totalPriceTexts) {
+        totalPriceText.innerText = 1299+ memoryCost + storageCost + deliveryCost
+    }
+}
+
+/* =========================================================
+                Function for Memory Pricing
+========================================================= */
 function memoryCostUpdate(memoryCepacity) {
     let memoryCostText = document.getElementById("extra-memory-cost");
     memoryCost = parseInt(memoryCostText.innerText)
@@ -13,7 +34,9 @@ function memoryCostUpdate(memoryCepacity) {
     totalCost()
 }
 
-
+/* =========================================================
+                Function for Storage Pricing
+========================================================= */
 function storageCostUpdate(storageCepacity) {
     let storageCostText = document.getElementById("extra-storage-cost");
     storageCost = parseInt(storageCostText.innerText)
@@ -29,7 +52,9 @@ function storageCostUpdate(storageCepacity) {
     totalCost()
 }
 
-
+/* =========================================================
+                Function for Delivery Cost
+========================================================= */
 function deliveryCostUpdate(deliveryCharge) {
     let deliveryCostText = document.getElementById("extra-delivery-cost");
     deliveryCost = parseInt(deliveryCostText.innerText)
@@ -43,24 +68,9 @@ function deliveryCostUpdate(deliveryCharge) {
     totalCost()
 }
 
-function totalCost() {
-    let memoryCostText = document.getElementById("extra-memory-cost");
-    memoryCost = parseInt(memoryCostText.innerText)
-    let storageCostText = document.getElementById("extra-storage-cost");
-    storageCost = parseInt(storageCostText.innerText)
-
-    let deliveryCostText = document.getElementById("extra-delivery-cost");
-    deliveryCost = parseInt(deliveryCostText.innerText)
-
-    let totalPriceTexts = document.getElementsByClassName("total-price")
-    for (const totalPriceText of totalPriceTexts) {
-        
-        totalPriceText.innerText = 1299+ memoryCost + storageCost + deliveryCost
-    }
-}
-
-
-// memoryCostUpdate
+/* =========================================================
+                        Memory Pricing
+========================================================= */
 document.getElementById("eightGBButton").addEventListener("click", function () {
     memoryCostUpdate("8gb")  
 })
@@ -71,7 +81,9 @@ document.getElementById("sixteenGBButton").addEventListener("click", function ()
 
 
 
-// storageCostUpdate
+/* =========================================================
+                    Storage Pricing
+========================================================= */
 document.getElementById("twoFiveSix").addEventListener("click", function () {
     storageCostUpdate("256gb")
 })
@@ -82,7 +94,9 @@ document.getElementById("oneTera").addEventListener("click", function () {
     storageCostUpdate("1tb")
 })
 
-// deliveryCostUpdate
+/* =========================================================
+                        Delivery Cost
+========================================================= */
 document.getElementById("freeDelivery").addEventListener("click", function () {
     deliveryCostUpdate("free")
 })
@@ -92,6 +106,25 @@ document.getElementById("premiumDelivery").addEventListener("click", function ()
 
 
 
-// let promoPriceText = document.getElementById("promo-price")
-// promoPrice = parseInt(promoPriceText.innerText)-20
-// promoPriceText.innerText = promoPrice
+/*==========================================================================
+                    Total Pricing After Using Promo Code 
+==========================================================================*/
+document.getElementById("cupon-apply-btn").addEventListener("click", function () {
+    let cuponBoxText = document.getElementById("cupon-box")
+    cuponBox = cuponBoxText.value
+
+    let promoPriceText = document.getElementById("promo-price")
+    promoPrice = parseFloat(promoPriceText.innerText)
+
+    let totalPriceText = document.getElementById("total-price")
+    totalPrice = parseFloat(totalPriceText.innerText)
+    newPrice =totalPrice - (totalPrice*20)/100
+
+    if (cuponBox == "stevekaku") {
+        promoPriceText.innerText = newPrice
+        cuponBoxText.value = ""
+    } 
+    else {
+        cuponBoxText.value = ""
+    }
+})

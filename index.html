@@ -19,26 +19,41 @@
     <main>
         <section class="container d-flex justify-content-center mt-4">
             <div>
+                <!--========================================
+                                MacBook Image 
+                =========================================-->
                 <img src="images/mac.png" alt="" class="w-75"> 
             </div>
             <div>
                 <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
                 <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard - US English
                     Memory</p>
-
+                
+                <!--========================================
+                                 Memory 
+                =========================================-->
                 <h4 class="mt-5">Memory</h4>
                 <button id="eightGBButton" class="btn-design fw-bold">8GB unified memory</button> 
                 <button id="sixteenGBButton" class="btn-design fw-bold">16GB unified memory</button>
 
+                <!--========================================
+                                 Storage
+                =========================================-->
                 <h5 class="mt-5">Storage</h5>
                 <button id="twoFiveSix" class="btn-design fw-bold">256GB SSD storage</button>
                 <button id="fiveOneTwo" class="btn-design fw-bold">512GB SSD storage</button>
                 <button id="oneTera" class="btn-design fw-bold">1TB SSD storage</button>
 
-
+                <!--========================================
+                                Delivery
+                =========================================-->
                 <h5 class="mt-5">Choose your delivery option</h5>
                 <button id="freeDelivery" class="btn-design fw-bold">Friday, Aug 25 FREE Prime Delivery</button>
                 <button id="premiumDelivery" class="btn-design fw-bold">Friday, Aug 21 Delivery charge $20</button>
+
+                <!--========================================
+                            Prices on Configuration
+                =========================================-->
                 <div class="d-flex my-5 ">
                     <div>
                         <h5>Best Price</h5>
@@ -54,15 +69,23 @@
                         <h5>$<span id="extra-storage-cost">0</span></h5>
                         <h5>$<span id="extra-delivery-cost">0</span></h5>
                         <hr>
-                        <h5>$<span class="total-price">1299</span> </h5>
+                        <h5>$<span id="total-price" class="total-price">1299</span> </h5>
                     </div>
                 </div>
-                <input type="text" name="" id=""> <button id="cupon-apply-btn">Apply</button>
+
+                <!--========================================
+                              Apply Promo Code
+                =========================================-->
+                <input type="text" name="" id="cupon-box"> 
+                <button id="cupon-apply-btn">Apply</button>
             </div>
 
         </section>
         <section class="container text-center">
             <hr>
+            <!--========================================
+                Total Price After Using Promo Code
+            =========================================-->
             <h1 >Total Price: $<span id="promo-price" class="total-price">1299</span> </h1>
         </section>
 

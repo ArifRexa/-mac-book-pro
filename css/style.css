@@ -1,15 +1,17 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap'); */
-
+/* ========================================
+                Font Baloo 2 
+=========================================*/
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
-body{
-    /* font-family: 'Poppins', sans-serif; */
+*{
     font-family: 'Baloo 2', cursive;
 }
 
-#horizontal-line{
-    width: 250px;
-}
+
+
+/* ========================================
+            Button Design 
+=========================================*/
 button{
     background-color: whitesmoke;
     border: 2px solid gray;
@@ -30,4 +32,12 @@ button{
     color: white;
     font-weight: 500;
 
+}
+
+
+/* ========================================
+                Utilites
+=========================================*/
+#horizontal-line{
+    width: 250px;
 }
